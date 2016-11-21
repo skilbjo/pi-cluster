@@ -1,0 +1,25 @@
+#!/bin/bash
+
+source ./commands.sh
+
+## Assignment
+command=${shutdown}
+
+## Loop functions
+function local {
+  for i in {3..6}; do
+    ssh 192.168.2.101 -p 14"$i" "$command"
+  done
+}
+
+function external {
+  for i in {3..6}; do
+    ssh skilbjo@skilbjo.duckdns.org -p 14"$i" "$command"
+  done
+}
+
+## Run code
+#external
+local
+
+exit

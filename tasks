@@ -1,0 +1,28 @@
+#!/bin/bash
+
+## Commands
+update="sudo pacman -Syyu"
+APP=llcomputing
+process="ps aux | grep node"
+shutdown="sudo shutdown -h now"
+git="mkdir git ; cd git ; mkdir llcomputing ; cd llcomputing ; git init --bare"
+MV="mv ~/app/llcomputing/ ~/llcomputing/"
+MPI="cd $APP ; mpiexec --machinefile machinefile --map-by node -n 4 python python/md5_attack.py"
+java="sudo pacman -Syyu jre8-openjdk-headless"
+dependencies="sudo pacman -Syyu maven perl perl-libapreq2"
+dependencies="sudo pacman -Syyu base-devel subversion apr openssl python-boto"
+dependencies="sudo pacman -Syyu bash coreutils findutils realpath curl cron"
+yaourt="yaourt binfmt-support"
+mesos="mkdir ~/mesos; cd ~/mesos; wget http://www.apache.org/dist/mesos/1.0.1/mesos-1.0.1.tar.gz ; tar -zxf mesos-1.0.1.tar.gz "
+oops="sudo rm /var/lib/pacman/db.lck"
+gcc="gcc-4.7"
+dotfiles="mkdir -p ~/dev; cd ~dev/; git clone git@github.com:skilbjo/dotfiles.git"
+uptime="uptime"
+python="sudo pacman -S python python2"
+ssh="ssh-keygen -t rsa"
+git="cd ~/dev/dotfiles ; git pull"
+configure="cd mesos/mesos-1.0.1 ; ./configure"
+mesos="cd mesos/mesos-1.0.1 ; make -j 3"
+tmux="sudo pacman -S tmux"
+mount="sudo -A mount /dev/sdb1 ~/usb-drive"
+swapon="sudo swapon ~/usb-drive/swapfile1"
